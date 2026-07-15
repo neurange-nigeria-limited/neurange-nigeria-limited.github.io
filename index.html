@@ -1,1 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Neurange Nigeria Limited — Registered Trading, Print &amp; Manufacturing Partner</title>
+<meta name="description" content="Neurange Nigeria Limited (RC 7045719) is a CAC-registered Lagos company operating across Trading, Printing Press, Detergent Production and General Merchandise — one accountable partner for four disciplines." />
 
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: { DEFAULT: '#0F1B2D', 800: '#152438', 700: '#1B2E45' },
+          paper: '#F7F5EF',
+          brass: { DEFAULT: '#B08D3E', 100: '#F1E7CE', 500: '#B08D3E', 600: '#8F7130' },
+          emerald: { DEFAULT: '#1F4D3D', 600: '#173B2F' },
+          slate2: '#445066',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['IBM Plex Sans', 'sans-serif'],
+          mono: ['IBM Plex Mono', 'monospace'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #F7F5EF; }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  .reveal-stagger > * { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal-stagger.is-visible > * { opacity: 1; transform: translateY(0); }
+  .reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 0ms; }
+  .reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 90ms; }
+  .reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 180ms; }
+  .reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 270ms; }
+  .reveal-stagger.is-visible > *:nth-child(5) { transition-delay: 360ms; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+  }
+
+  .seal-ring { stroke-dasharray: 4 6; animation: spin 40s linear infinite; transform-origin: center; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .seal-ring { animation: none; } }
+
+  .ledger-divider {
+    background-image: repeating-linear-gradient(to right, #B08D3E 0, #B08D3E 6px, transparent 6px, transparent 14px);
+    height: 2px;
+  }
+
+  .card-lift { transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
+  .card-lift:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -20px rgba(15,27,45,0.25); border-color: #B08D3E; }
+
+  .btn-primary { transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -10px rgba(176,141,62,0.55); }
+  .btn-primary:active { transform: translateY(0); }
+
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; width: 0%; height: 1px; background: #B08D3E; transition: width 0.3s ease; }
+  .nav-link:hover::after { width: 100%; }
+
+  .faq-toggle:checked ~ .faq-panel { grid-template-rows: 1fr; }
+  .faq-toggle:checked ~ .faq-icon { transform: rotate(45deg); }
+  .faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.35s ease; }
+  .faq-panel > div { overflow: hidden; }
+  .faq-icon { transition: transform 0.3s ease; }
+
+  ::selection { background: #B08D3E; color: #0F1B2D; }
+  :focus-visible { outline: 2px solid #B08D3E; outline-offset: 3px; }
+</style>
+</head>
+
+<body class="font-body text-ink antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-50 bg-paper/90 backdrop-blur-md border-b border-ink/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 group">
+      <span class="relative flex h-10 w-10 items-center justify-center rounded-full border border-brass/70 text-brass font-display font-semibold text-sm">
+        N
+        <svg class="absolute inset-0 seal-ring" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18.5" stroke="#B08D3E" stroke-opacity="0.5"/>
+        </svg>
+      </span>
+      <span class="font-display text-lg tracking-tight">Neurange <span class="text-brass-600">Nigeria</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+      <a href="#divisions" class="nav-link hover:text-ink">Divisions</a>
+      <a href="#why" class="nav-link hover:text-ink">Why Neurange</a>
+      <a href="#governance" class="nav-link hover:text-ink">Governance</a>
+      <a href="#process" class="nav-link hover:text-ink">Process</a>
+      <a href="#faq" class="nav-link hover:text-ink">FAQ</a>
+    </nav>
+    <a href="#contact" class="btn-primary inline-flex items-center gap-2 bg-ink text-paper text-sm font-semibold px-5 py-2.5 rounded-full">
+      Request a Quote
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative bg-ink text-paper pt-40 pb-28 overflow-hidden">
+  <svg class="absolute -right-24 -top-24 opacity-[0.08]" width="520" height="520" viewBox="0 0 520 520" fill="none">
+    <circle cx="260" cy="260" r="180" stroke="#B08D3E" stroke-width="1"/>
+    <circle cx="260" cy="260" r="230" stroke="#B08D3E" stroke-width="1"/>
+    <circle cx="260" cy="260" r="130" stroke="#B08D3E" stroke-width="1"/>
+  </svg>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+    <div class="max-w-3xl reveal" data-reveal>
+      <p class="font-mono text-xs tracking-[0.25em] text-brass uppercase mb-6">RC 7045719 &middot; Federal Republic of Nigeria &middot; CAC Registered</p>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.08] font-semibold">
+        One registered company.<br/> Four working disciplines.<br/>
+        <span class="text-brass">Zero guesswork.</span>
+      </h1>
+      <p class="mt-7 text-lg text-paper/75 max-w-xl leading-relaxed">
+        Neurange Nigeria Limited is a Lagos-based private company delivering trading, print production, detergent manufacturing and general merchandise supply — under one legal entity, one compliance record, one point of contact.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <a href="#contact" class="btn-primary bg-brass text-ink font-semibold px-7 py-3.5 rounded-full text-sm">Start a Conversation</a>
+        <a href="#divisions" class="inline-flex items-center gap-2 text-paper/80 text-sm font-medium hover:text-paper transition-colors">
+          See our divisions
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- credential strip -->
+    <div class="mt-16 reveal" data-reveal>
+      <div class="ledger-divider w-full mb-6 opacity-60"></div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs text-paper/60">
+        <div><span class="block text-paper/40 uppercase tracking-wider mb-1">Registered</span>9 Jul 2023</div>
+        <div><span class="block text-paper/40 uppercase tracking-wider mb-1">Company type</span>Ltd by Shares</div>
+        <div><span class="block text-paper/40 uppercase tracking-wider mb-1">Jurisdiction</span>Lagos, Nigeria</div>
+        <div><span class="block text-paper/40 uppercase tracking-wider mb-1">Status</span>Active</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS BAR ============ -->
+<section class="bg-paper border-b border-ink/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 reveal-stagger" data-reveal-group>
+      <div class="text-center md:text-left">
+        <p class="font-display text-4xl font-semibold text-ink"><span class="counter" data-target="4">0</span></p>
+        <p class="text-sm text-ink/60 mt-1">Core business divisions</p>
+      </div>
+      <div class="text-center md:text-left">
+        <p class="font-display text-4xl font-semibold text-ink"><span class="counter" data-target="5">0</span></p>
+        <p class="text-sm text-ink/60 mt-1">Founding shareholders</p>
+      </div>
+      <div class="text-center md:text-left">
+        <p class="font-display text-4xl font-semibold text-ink">₦<span class="counter" data-target="1">0</span>M</p>
+        <p class="text-sm text-ink/60 mt-1">Issued share capital</p>
+      </div>
+      <div class="text-center md:text-left">
+        <p class="font-display text-4xl font-semibold text-ink"><span class="counter" data-target="2023">0</span></p>
+        <p class="text-sm text-ink/60 mt-1">Year incorporated</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / VALUE PROP ============ -->
+<section class="bg-paper py-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-start">
+    <div class="lg:col-span-5 reveal" data-reveal>
+      <p class="font-mono text-xs tracking-[0.25em] text-brass-600 uppercase mb-4">Why we're built this way</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold leading-tight">
+        Most vendors specialise in one thing. We were incorporated to be trusted with four.
+      </h2>
+    </div>
+    <div class="lg:col-span-7 reveal" data-reveal>
+      <p class="text-ink/70 text-lg leading-relaxed">
+        Growing businesses in Nigeria rarely have a single, simple procurement need — a retailer needs branded packaging one month and bulk detergent the next; a distributor needs a trading partner who also understands production. Neurange Nigeria Limited was formed under the Companies and Allied Matters Act 2020 specifically to remove that friction: one CAC-registered entity, one commercial relationship, four disciplines working from the same standard of accountability.
+      </p>
+      <p class="text-ink/70 text-lg leading-relaxed mt-5">
+        Every engagement — whether it's a print run, a detergent order, a trading contract or a merchandise supply line — moves through the same governance, the same documentation, and the same people who signed the company into existence.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <span class="px-4 py-2 rounded-full bg-emerald/5 border border-emerald/20 text-emerald text-sm font-medium">CAMA 2020 Compliant</span>
+        <span class="px-4 py-2 rounded-full bg-emerald/5 border border-emerald/20 text-emerald text-sm font-medium">Verified CAC Certificate</span>
+        <span class="px-4 py-2 rounded-full bg-emerald/5 border border-emerald/20 text-emerald text-sm font-medium">Family-Governed Board</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIVISIONS ============ -->
+<section id="divisions" class="bg-ink text-paper py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mb-16 reveal" data-reveal>
+      <p class="font-mono text-xs tracking-[0.25em] text-brass uppercase mb-4">Our registered activities</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold">Four divisions. One standard of delivery.</h2>
+      <p class="mt-5 text-paper/65 text-lg">Each division is licensed under our CAC-registered principal business activity and run by the same accountable leadership.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 reveal-stagger" data-reveal-group>
+      <!-- Trading -->
+      <div class="card-lift bg-ink-700 border border-paper/10 rounded-2xl p-8">
+        <div class="h-12 w-12 rounded-xl bg-brass/15 flex items-center justify-center mb-6">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B08D3E" stroke-width="1.8"><path d="M3 7h18l-1.5 12h-15L3 7z"/><path d="M8 7V5a4 4 0 018 0v2"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-semibold mb-3">Trading</h3>
+        <p class="text-paper/65 leading-relaxed">Sourcing, import-adjacent supply, and bulk commercial trading relationships for businesses that need a dependable counterparty — with clean invoicing and CAC-verifiable paperwork behind every transaction.</p>
+      </div>
+      <!-- Printing -->
+      <div class="card-lift bg-ink-700 border border-paper/10 rounded-2xl p-8">
+        <div class="h-12 w-12 rounded-xl bg-brass/15 flex items-center justify-center mb-6">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B08D3E" stroke-width="1.8"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-semibold mb-3">Printing Press</h3>
+        <p class="text-paper/65 leading-relaxed">Commercial print production for packaging, branded stationery, and promotional material — built for businesses that need consistent, reorder-ready output rather than one-off jobs.</p>
+      </div>
+      <!-- Detergent -->
+      <div class="card-lift bg-ink-700 border border-paper/10 rounded-2xl p-8">
+        <div class="h-12 w-12 rounded-xl bg-brass/15 flex items-center justify-center mb-6">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B08D3E" stroke-width="1.8"><path d="M9 3h6l1 4H8l1-4z"/><path d="M7 7h10l1.2 12.2A2 2 0 0116.2 21H7.8a2 2 0 01-2-1.8L7 7z"/><path d="M9 13c0 1.5 1.5 1.5 1.5 3S9 17.5 9 19"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-semibold mb-3">Detergent Production</h3>
+        <p class="text-paper/65 leading-relaxed">Manufactured cleaning products supplied at volume to retailers, institutions and distributors, with formulation and output managed under our registered production activity.</p>
+      </div>
+      <!-- General Merchandise -->
+      <div class="card-lift bg-ink-700 border border-paper/10 rounded-2xl p-8">
+        <div class="h-12 w-12 rounded-xl bg-brass/15 flex items-center justify-center mb-6">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B08D3E" stroke-width="1.8"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-semibold mb-3">General Merchandise</h3>
+        <p class="text-paper/65 leading-relaxed">Flexible supply of everyday goods for shops, offices and household distribution — the catch-all line that lets partners consolidate smaller, varied orders into one relationship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY NEURANGE ============ -->
+<section id="why" class="bg-paper py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mb-16 reveal" data-reveal>
+      <p class="font-mono text-xs tracking-[0.25em] text-brass-600 uppercase mb-4">What partners get</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold">Built to remove the risk of working with an unregistered vendor</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 reveal-stagger" data-reveal-group>
+      <div class="card-lift bg-white border border-ink/10 rounded-2xl p-8">
+        <div class="font-mono text-xs text-brass-600 mb-4">01 — Legitimacy</div>
+        <h3 class="font-display text-lg font-semibold mb-2">Fully verifiable registration</h3>
+        <p class="text-ink/65 leading-relaxed">Our Certificate of Incorporation, TIN and CAC status report are matters of public record — you can confirm who you're dealing with before you commit.</p>
+      </div>
+      <div class="card-lift bg-white border border-ink/10 rounded-2xl p-8">
+        <div class="font-mono text-xs text-brass-600 mb-4">02 — Continuity</div>
+        <h3 class="font-display text-lg font-semibold mb-2">One relationship, not four vendors</h3>
+        <p class="text-ink/65 leading-relaxed">A single contract and point of contact can cover print, trading, detergent and merchandise needs — fewer handoffs, fewer reconciliations.</p>
+      </div>
+      <div class="card-lift bg-white border border-ink/10 rounded-2xl p-8">
+        <div class="font-mono text-xs text-brass-600 mb-4">03 — Governance</div>
+        <h3 class="font-display text-lg font-semibold mb-2">Named, accountable leadership</h3>
+        <p class="text-ink/65 leading-relaxed">Directors and shareholders are named on our CAC filings, not hidden behind a brand — decisions trace back to real people.</p>
+      </div>
+      <div class="card-lift bg-white border border-ink/10 rounded-2xl p-8">
+        <div class="font-mono text-xs text-brass-600 mb-4">04 — Capacity</div>
+        <h3 class="font-display text-lg font-semibold mb-2">Structured for volume</h3>
+        <p class="text-ink/65 leading-relaxed">Registered production and trading activity means orders scale beyond one-off jobs into recurring supply arrangements.</p>
+      </div>
+      <div class="card-lift bg-white border border-ink/10 rounded-2xl p-8">
+        <div class="font-mono text-xs text-brass-600 mb-4">05 — Documentation</div>
+        <h3 class="font-display text-lg font-semibold mb-2">Clean paper trail, every time</h3>
+        <p class="text-ink/65 leading-relaxed">Invoicing and correspondence run through the registered entity — useful for procurement teams that need auditable vendor records.</p>
+      </div>
+      <div class="card-lift bg-white border border-ink/10 rounded-2xl p-8">
+        <div class="font-mono text-xs text-brass-600 mb-4">06 — Base of operations</div>
+        <h3 class="font-display text-lg font-semibold mb-2">Rooted in Lagos industry</h3>
+        <p class="text-ink/65 leading-relaxed">Operating from the Lagos State Small Scale Industrial Estate puts us close to logistics, suppliers and the city's commercial corridors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GOVERNANCE ============ -->
+<section id="governance" class="bg-emerald text-paper py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mb-16 reveal" data-reveal>
+      <p class="font-mono text-xs tracking-[0.25em] text-brass uppercase mb-4">On record with the CAC</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold">Leadership you can name and verify</h2>
+      <p class="mt-5 text-paper/70 text-lg">The people directing Neurange Nigeria Limited are filed on our public incorporation record — not anonymous.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger" data-reveal-group>
+      <div class="border border-paper/15 rounded-2xl p-7 bg-emerald-600/40">
+        <p class="font-display text-lg font-semibold">Samuel Nnamdi Emerem</p>
+        <p class="text-brass text-sm mt-1 mb-3">Director &middot; Majority Shareholder</p>
+        <p class="text-paper/65 text-sm leading-relaxed">Holds the controlling 60% interest and directs overall company strategy and compliance.</p>
+      </div>
+      <div class="border border-paper/15 rounded-2xl p-7 bg-emerald-600/40">
+        <p class="font-display text-lg font-semibold">Chinelo Catherine Emerem</p>
+        <p class="text-brass text-sm mt-1 mb-3">Director &middot; Shareholder</p>
+        <p class="text-paper/65 text-sm leading-relaxed">Sits on the board with a 28% shareholding, contributing to operational oversight.</p>
+      </div>
+      <div class="border border-paper/15 rounded-2xl p-7 bg-emerald-600/40">
+        <p class="font-display text-lg font-semibold">Noble Osinachi Chukwukere</p>
+        <p class="text-brass text-sm mt-1 mb-3">Director &middot; Shareholder</p>
+        <p class="text-paper/65 text-sm leading-relaxed">Company director bringing systems and process discipline to day-to-day execution.</p>
+      </div>
+    </div>
+
+    <p class="mt-10 text-paper/50 text-sm reveal" data-reveal>Full share register and PSC (Persons with Significant Control) filings are available on request for procurement due diligence.</p>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="bg-paper py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mb-16 reveal" data-reveal>
+      <p class="font-mono text-xs tracking-[0.25em] text-brass-600 uppercase mb-4">How an engagement runs</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold">From first enquiry to recurring supply</h2>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-8 reveal-stagger" data-reveal-group>
+      <div>
+        <p class="font-display text-3xl text-brass-600 font-semibold mb-3">01</p>
+        <h3 class="font-semibold mb-2">Enquiry</h3>
+        <p class="text-ink/60 text-sm leading-relaxed">Tell us which division fits your need — trading, print, detergent or merchandise.</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl text-brass-600 font-semibold mb-3">02</p>
+        <h3 class="font-semibold mb-2">Scoping</h3>
+        <p class="text-ink/60 text-sm leading-relaxed">We confirm volumes, specifications and timelines, and issue formal documentation.</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl text-brass-600 font-semibold mb-3">03</p>
+        <h3 class="font-semibold mb-2">Fulfilment</h3>
+        <p class="text-ink/60 text-sm leading-relaxed">Production or sourcing runs against the agreed order, with progress checkpoints.</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl text-brass-600 font-semibold mb-3">04</p>
+        <h3 class="font-semibold mb-2">Delivery &amp; reorder</h3>
+        <p class="text-ink/60 text-sm leading-relaxed">Goods are delivered against invoice, with a clear path to recurring supply terms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="bg-white py-28 border-y border-ink/10">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10">
+    <div class="mb-14 reveal" data-reveal>
+      <p class="font-mono text-xs tracking-[0.25em] text-brass-600 uppercase mb-4">Common questions</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold">Before you reach out</h2>
+    </div>
+
+    <div class="space-y-4 reveal" data-reveal>
+      <div class="border border-ink/10 rounded-2xl overflow-hidden">
+        <input type="checkbox" id="faq1" class="faq-toggle hidden peer">
+        <label for="faq1" class="faq-toggle-label flex items-center justify-between p-6 cursor-pointer font-semibold">
+          Is Neurange Nigeria Limited officially registered?
+          <span class="faq-icon text-brass-600 text-2xl leading-none">+</span>
+        </label>
+        <div class="faq-panel px-6">
+          <div class="pb-6 text-ink/65 leading-relaxed">Yes. We hold Certificate of Incorporation No. 7045719, issued 9 July 2023 under the Companies and Allied Matters Act 2020, and our status remains active on the CAC register.</div>
+        </div>
+      </div>
+      <div class="border border-ink/10 rounded-2xl overflow-hidden">
+        <input type="checkbox" id="faq2" class="faq-toggle hidden peer">
+        <label for="faq2" class="flex items-center justify-between p-6 cursor-pointer font-semibold">
+          Can one order combine multiple divisions — say, printing and merchandise?
+          <span class="faq-icon text-brass-600 text-2xl leading-none">+</span>
+        </label>
+        <div class="faq-panel px-6">
+          <div class="pb-6 text-ink/65 leading-relaxed">Yes, that's precisely why we're structured this way. Combined orders are scoped and invoiced as a single engagement wherever practical.</div>
+        </div>
+      </div>
+      <div class="border border-ink/10 rounded-2xl overflow-hidden">
+        <input type="checkbox" id="faq3" class="faq-toggle hidden peer">
+        <label for="faq3" class="flex items-center justify-between p-6 cursor-pointer font-semibold">
+          Where are you based, and do you supply outside Lagos?
+          <span class="faq-icon text-brass-600 text-2xl leading-none">+</span>
+        </label>
+        <div class="faq-panel px-6">
+          <div class="pb-6 text-ink/65 leading-relaxed">Our registered office sits in the Lagos State Small Scale Industrial Estate, Mushin. We supply nationally on request — get in touch with your delivery location and volumes.</div>
+        </div>
+      </div>
+      <div class="border border-ink/10 rounded-2xl overflow-hidden">
+        <input type="checkbox" id="faq4" class="faq-toggle hidden peer">
+        <label for="faq4" class="flex items-center justify-between p-6 cursor-pointer font-semibold">
+          What information do you need to send a quote?
+          <span class="faq-icon text-brass-600 text-2xl leading-none">+</span>
+        </label>
+        <div class="faq-panel px-6">
+          <div class="pb-6 text-ink/65 leading-relaxed">The division you need, an estimate of quantity or scope, and your target timeline. We'll come back with a formal quotation and next steps.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="contact" class="bg-ink text-paper py-28 relative overflow-hidden">
+  <svg class="absolute left-1/2 -translate-x-1/2 -bottom-32 opacity-[0.07]" width="600" height="600" viewBox="0 0 600 600" fill="none">
+    <circle cx="300" cy="300" r="220" stroke="#B08D3E" stroke-width="1"/>
+    <circle cx="300" cy="300" r="270" stroke="#B08D3E" stroke-width="1"/>
+  </svg>
+  <div class="max-w-3xl mx-auto px-6 text-center relative reveal" data-reveal>
+    <p class="font-mono text-xs tracking-[0.25em] text-brass uppercase mb-6">Let's get your order scoped</p>
+    <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+      Tell us which division you need — we'll take it from there.
+    </h2>
+    <p class="mt-6 text-paper/70 text-lg">Reach the team directly and we'll respond with a formal quotation.</p>
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <a href="mailto:neurangenigeria@gmail.com" class="btn-primary bg-brass text-ink font-semibold px-8 py-4 rounded-full text-sm">
+        neurangenigeria@gmail.com
+      </a>
+    </div>
+    <p class="mt-6 font-mono text-xs text-paper/40">RC 7045719 &middot; Lagos State Small Scale Industrial Estate, Fatai Atere Way, Mushin, Lagos State, Nigeria</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink-800 text-paper/50 py-12 border-t border-paper/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+    <div class="flex items-center gap-3">
+      <span class="flex h-8 w-8 items-center justify-center rounded-full border border-brass/50 text-brass font-display text-xs">N</span>
+      <span>Neurange Nigeria Limited &middot; RC 7045719</span>
+    </div>
+    <p class="text-center md:text-right">Incorporated 9 July 2023 under CAMA 2020 &middot; Private Company Limited by Shares</p>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('[data-reveal], [data-reveal-group]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Counters
+  const counters = document.querySelectorAll('.counter');
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      const duration = 1200;
+      const start = performance.now();
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target).toLocaleString();
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      counterIO.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(el => counterIO.observe(el));
+</script>
+
+</body>
+</html>
